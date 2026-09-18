@@ -1,0 +1,14 @@
+========== BÁO CÁO TỒN KHO ==========
+
+Danh sách sản phẩm:
+Product{id='sp1', name='sanpham1', price=150000,00, quantity=3, totalValue=450000,00}
+Product{id='sp2', name='sanpham2', price=250000,00, quantity=6, totalValue=1500000,00}
+Product{id='sp3', name='sanpham3', price=450000,00, quantity=7, totalValue=3150000,00}
+Product{id='sp1', name='sanpham1', price=150000,00, quantity=3, totalValue=450000,00}
+Product{id='sp2', name='sanpham2', price=250000,00, quantity=6, totalValue=1500000,00}
+Product{id='sp3', name='sanpham3', price=450000,00, quantity=7, totalValue=3150000,00}
+
+Tổng giá trị tồn kho: 10200000,00
+
+Sản phẩm có giá trị tồn kho cao nhất:
+Product{id='sp3', name='sanpham3', price=450000,00, quantity=7, totalValue=3150000,00}
