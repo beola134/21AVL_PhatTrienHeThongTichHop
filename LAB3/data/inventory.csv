@@ -1,4 +1,4 @@
 id,name,price,quantity
-sp1,sanpham1,150000.0,3
-sp2,sanpham2,250000.0,6
-sp3,sanpham3,450000.0,7
+SP1,SanPham1,250000.0,3
+SP2,SanPham2,45000.0,2
+SP3,SanPham3,95000.0,5

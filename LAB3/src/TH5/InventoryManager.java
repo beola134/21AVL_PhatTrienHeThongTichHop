@@ -103,7 +103,7 @@ public class InventoryManager {
     // Đọc lại tệp CSV và tái tạo danh sách đối tượng Product.
     public void loadFromCSV(String fileName) {
         // Xóa danh sách cũ 
-        // products.clear();
+        products.clear();
         Path path = Paths.get(fileName);
         try {
             // Mở file đọc bằng UTF-8

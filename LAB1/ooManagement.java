@@ -2,10 +2,11 @@
 public class ooManagement {
 
     public static void main(String[] args) {
+        // Khởi tạo các đối tượng động vật
         Lion lion = new Lion("Leo", 300, 5);
         Snake snake = new Snake("Boa", 50, 5);
         Monkey monkey = new Monkey("George", 150, "chuoi");
-
+        // hiện thị thông tin của từng đối tượng
         lion.display();
         snake.display();
         monkey.display();
@@ -14,16 +15,18 @@ public class ooManagement {
 }
 
 class Animal {
-
+    // Lớp Animal Chứa các đặc điểm chung con vật: Tên cân nặng
     protected String name;
     protected double weight;
 
+    // Khởi tạo thông tin cơ bản
     public Animal(String name, double weight) {
         this.name = name;
         this.weight = weight;
     }
 }
 
+// Các lớp con Lion, Snake, Monkey (Kế thừa từ Animal qua từ khóa extends)
 class Lion extends Animal {
 
     private double eat;

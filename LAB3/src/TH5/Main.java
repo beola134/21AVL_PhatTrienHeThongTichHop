@@ -1,6 +1,7 @@
 package TH5;
 
 import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -27,7 +28,8 @@ public class Main {
             try {
                 choice = Integer.parseInt(sc.nextLine());
                 switch (choice) {
-                    // CASE 1: Nhập danh sách sản phẩm từ bàn phím; mã và tên không rỗng, đơn giá lớn hơn 0, số lượng không âm.
+                    // CASE 1: Nhập danh sách sản phẩm từ bàn phím; mã và tên không rỗng, đơn giá
+                    // lớn hơn 0, số lượng không âm.
                     case 1:
                         manager.inputProducts(sc);
                         break;
@@ -57,7 +59,7 @@ public class Main {
                             System.out.println(max);
                         }
                         break;
-                    // CASE 7:  Ghi báo cáo tổng hợp vào data/inventory-report.txt
+                    // CASE 7: Ghi báo cáo tổng hợp vào data/inventory-report.txt
                     case 7:
                         manager.writeReport("data/inventory-report.txt");
                         break;
@@ -73,7 +75,7 @@ public class Main {
             } catch (NumberFormatException e) {
                 // Nếu nhập chữ thay vì số
                 System.out.println("Lỗi: Vui lòng nhập số!");
-                choice = -1; 
+                choice = -1;
             }
 
         } while (choice != 0);
@@ -81,3 +83,7 @@ public class Main {
         sc.close();
     }
 }
+
+// Product.java — Định nghĩa đối tượng (Model)
+// InventoryManager.java — Quản lý kho hàng (Controller/Service):
+// Main.java — Điều hướng & Chạy ứng dụng (View/Main):

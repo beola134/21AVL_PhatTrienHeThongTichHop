@@ -6,13 +6,16 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class NumberClient {
+    // CẤU HÌNH ĐỊA CHỈ VÀ CỔNG KẾT NỐI ĐẾN SERVER
     private static final String SERVER_HOST = "127.0.0.1";
     private static final int PORT = 9999;
 
     public static void main(String[] args) {
         System.out.println("Ket noi toi Server " + SERVER_HOST + ":" + PORT + "...");
+        // THIẾT LẬP KẾT NỐI MẠNG VÀ CÁC LUỒNG ĐỌC/GH
         try (
-                Socket socket = new Socket(SERVER_HOST, PORT);
+                Socket socket = new Socket(SERVER_HOST, PORT); // Mở kết nối Socket tới Server
+                // Luồng đọc dữ liệu từ server và ghi/gửi dữ liệu từ Client tới Server
                 BufferedReader reader = new BufferedReader(
                         new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
                 BufferedWriter writer = new BufferedWriter(
@@ -36,9 +39,9 @@ public class NumberClient {
                 }
 
                 System.out.println("Server ph hoi: " + response);
-
+                // khi gõ QUIT hoặc nhận phản hồi TAMBIET
                 if ("TAMBIET".equalsIgnoreCase(response) || "QUIT".equalsIgnoreCase(input)) {
-                    break;
+                    break;// tự động đóng Socket
                 }
             }
         } catch (IOException e) {
